@@ -16,6 +16,9 @@ public class RunApplication {
 //		SpringApplication.run(RunApplication.class, args);
 
 		FileService fileService = new FileService(filePath);
+
+		fileService.writeLine("abcd");
+
 		List<String> file = fileService.readLine();
 
 		log.info(file.toString());
